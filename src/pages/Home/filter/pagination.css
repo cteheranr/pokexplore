@@ -1,0 +1,28 @@
+.pagination{
+    display: flex;
+    gap: 5px;
+}
+
+.btnLeft, .btnRight{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.btnLeft:hover, .btnRight:hover{
+    background-color: #d2d2d2;
+    cursor: pointer;
+}
+
+.noPage{
+    background-color: #ffff;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}

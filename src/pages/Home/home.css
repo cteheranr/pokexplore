@@ -1,0 +1,26 @@
+.card-content{
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    grid-gap: 25px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+.main_header{
+    padding: 15px;
+}
+
+.attribution { 
+    color: var(--text);
+    font-size: 11px; text-align: center; 
+}
+  
+.attribution a { 
+    color: var(--color-header)
+}
+  
+footer{
+    width: 100%;
+}

@@ -8,6 +8,7 @@ function Card({ card }) {
   const [infoSpecies, setInfoSpecies] = useState({});
   const [typeInfo, setTypeInfo] = useState([]);
   const urlActual = useHref();
+  const URL = card.url.split("/");
 
   useEffect(() => {
     getInfoPokemonById();
@@ -25,7 +26,6 @@ function Card({ card }) {
   };
 
   const getInfoSpeciesById = async () => {
-    const URL = card.url.split("/");
     const response = await fetch(`${GET_SPECIES_BY_ID}/${URL[6]}`)
       .then((res) => res.json())
       .then((data) => {
@@ -34,14 +34,10 @@ function Card({ card }) {
       .catch((error) => console.error("Error:", error));
   };
 
-  const ruta = () => {
-    console.log(urlActual)
-  }
-
   return (
-    <Link className="link" to={`/pokemon/${card.name}`}>
+    <Link className="link" to={`/pokemon/${URL[6]}`}>
       <div className="card">
-        <strong className="id-container">{`#${infoPokemon.id}`}</strong>
+        <strong className="id-container">{`# ${infoPokemon.id}`}</strong>
         <img
           src={infoPokemon?.sprites?.other["official-artwork"]?.front_default}
           alt="foto pokemon"

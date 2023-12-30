@@ -11,7 +11,7 @@ function LayoutHome() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pokemon/:name" Component={PokemonDetails} />  
+        <Route path="/pokemon/:idPokemon" Component={PokemonDetails} />  
         {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
     </div>

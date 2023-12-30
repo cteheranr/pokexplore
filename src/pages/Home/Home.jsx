@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { GET_ALL_POKEMON } from '../../environments/environment';
 import Card from './card/Card';
 import './home.css';
 import Pagination from './filter/Pagination';

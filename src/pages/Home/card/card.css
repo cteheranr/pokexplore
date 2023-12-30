@@ -62,10 +62,11 @@
 
 .type p {
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 400;
     padding: 0px 11px;
     border-radius: 7px;
     width: 80px;
+    text-align: center;
 }
 
 .color-grass {

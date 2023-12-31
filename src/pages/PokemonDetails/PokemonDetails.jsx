@@ -21,7 +21,6 @@ function PokemonDetails() {
     const getPokemonByName = async () => {
         const response = await fetch(`${GET_ALL_POKEMON}/${params.idPokemon}`).then(res => res.json()).then((data) => {
             setDataPokemon(data);
-            console.log(data)
             setTypeInfo(data.types)
             setColor(data.types[0].type.name);
             setHabilidades(data.abilities)

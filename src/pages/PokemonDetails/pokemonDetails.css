@@ -105,8 +105,7 @@
     width: 94%;
     height: max-content;
     background-color: #ffffff;
-    margin-top: 140px;
-    margin: 140px auto 0;
+    margin-top: -70px;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -205,4 +204,36 @@ progress{
 .title{
     width: 100%;
     text-align: center;
+}
+
+.container-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+@media (width > 700px) {
+    .card-info img {
+        width: 300px;
+        margin-top: -575px;
+    }
+
+    .card-info{
+        width: 500px;
+        margin-top: -90px;
+    }
+
+    .attribute, .attribute-hb{
+        font-size: 16px;
+    }
+
+    .title-atribute{
+        font-size: 13px;
+    }
+
+    .container-info img{
+        width: 340px;
+    }
 }

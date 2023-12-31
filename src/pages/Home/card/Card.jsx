@@ -35,7 +35,7 @@ function Card({ card }) {
   };
 
   return (
-    <Link className="link" to={`/pokemon/${URL[6]}`}>
+    <Link className="link" to={`pokemon/${URL[6]}`}>
       <div className="card">
         <strong className="id-container">{`# ${infoPokemon.id}`}</strong>
         <img

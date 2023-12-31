@@ -44,55 +44,57 @@ function PokemonDetails() {
                 <div className='container-info'>
                     <img src={pokeball} alt="pokeball" />
                 </div>
-                <div className='card-info'>
-                    <img
-                        src={dataPokemon?.sprites?.other["official-artwork"]?.front_default}
-                        alt="foto pokemon"
-                    />
-                    <div className="type inter">
-                        {typeInfo.map((typeInfo, index) => (
-                            <p className={`color-${typeInfo.type.name}`} key={index}>{typeInfo.type.name}</p>
-                        ))}
-                    </div>
-                    <h2 className={`font-${color}`}>Acerca de</h2>
-                    <div className='attributes'>
-                        <div className='container-attribute'>
-                            <div className='attribute'>
-                                <LiaWeightHangingSolid />
-                                <p>{`${dataPokemon.weight} kg`}</p>
-                            </div>
-                            <p className='title-atribute'>Peso</p>
+                <div className='container-card'>
+                    <div className='card-info'>
+                        <img
+                            src={dataPokemon?.sprites?.other["official-artwork"]?.front_default}
+                            alt="foto pokemon"
+                        />
+                        <div className="type inter">
+                            {typeInfo.map((typeInfo, index) => (
+                                <p className={`color-${typeInfo.type.name}`} key={index}>{typeInfo.type.name}</p>
+                            ))}
                         </div>
-                        <hr />
-                        <div className='container-attribute'>
-                            <div className='attribute'>
-                                <LiaRulerVerticalSolid />
-                                <p>{`${dataPokemon.height} m`}</p>
-                            </div>
-                            <p className='title-atribute'>Estatura</p>
-                        </div>
-                        <hr />
-                        <div className='container-attribute'>
-                            <div className='attribute-hb'>
-                                {habilidades.map((hab, index) => (
-                                    <p key={index}>{hab.ability.name}</p>
-                                ))}
-                            </div>
-                            <p className='title-atribute'>Habilidades</p>
-                        </div>
-                    </div>
-                    <div className='content-stats'>
-                        <h2 className={`title font-${color}`}>Estadísticas</h2>
-                        <div className='stats'>
-                            {dataPokemon?.stats?.map((stat, index) => {
-                                return <div key={index} className='div-stats'>
-                                    <span className='name-stat'>{stat.stat.name}</span>
-                                    <span className='base-stat'>{stat.base_stat}</span>
-                                    <div className='progress-stat'>
-                                        <progress value={stat.base_stat} max={110}></progress>
-                                    </div>
+                        <h2 className={`font-${color}`}>Acerca de</h2>
+                        <div className='attributes'>
+                            <div className='container-attribute'>
+                                <div className='attribute'>
+                                    <LiaWeightHangingSolid />
+                                    <p>{`${dataPokemon.weight} kg`}</p>
                                 </div>
-                            })}
+                                <p className='title-atribute'>Peso</p>
+                            </div>
+                            <hr />
+                            <div className='container-attribute'>
+                                <div className='attribute'>
+                                    <LiaRulerVerticalSolid />
+                                    <p>{`${dataPokemon.height} m`}</p>
+                                </div>
+                                <p className='title-atribute'>Estatura</p>
+                            </div>
+                            <hr />
+                            <div className='container-attribute'>
+                                <div className='attribute-hb'>
+                                    {habilidades.map((hab, index) => (
+                                        <p key={index}>{hab.ability.name}</p>
+                                    ))}
+                                </div>
+                                <p className='title-atribute'>Habilidades</p>
+                            </div>
+                        </div>
+                        <div className='content-stats'>
+                            <h2 className={`title font-${color}`}>Estadísticas</h2>
+                            <div className='stats'>
+                                {dataPokemon?.stats?.map((stat, index) => {
+                                    return <div key={index} className='div-stats'>
+                                        <span className='name-stat'>{stat.stat.name}</span>
+                                        <span className='base-stat'>{stat.base_stat}</span>
+                                        <div className='progress-stat'>
+                                            <progress value={stat.base_stat} max={110}></progress>
+                                        </div>
+                                    </div>
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>

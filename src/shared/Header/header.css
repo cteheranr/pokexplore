@@ -38,3 +38,20 @@
     border: none;
     cursor: pointer;
 }
+
+@media (700 <= width >= 999px) {
+    .search input{
+        max-width: 200px;
+    }
+}
+
+@media (width >= 1000px) {
+    .search{
+        max-width: 340px;
+        width: 400px;
+    }
+    .search input{
+        max-width: 300px;
+        width: 300px;
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from '../pages/Home/Home';
 import Header from '../shared/Header/Header'
@@ -11,8 +11,7 @@ function LayoutHome() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pokemon/:idPokemon" Component={PokemonDetails} />  
-        {/* <Route path="*" element={<NoPage />} /> */}
+        <Route path="/pokemon/:idPokemon" Component={PokemonDetails} /> 
       </Routes>
     </div>
   )

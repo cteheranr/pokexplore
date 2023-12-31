@@ -76,7 +76,7 @@ function PokemonDetails() {
                         <div className='container-attribute'>
                             <div className='attribute-hb'>
                                 {habilidades.map((hab, index) => (
-                                    <p>{hab.ability.name}</p>
+                                    <p key={index}>{hab.ability.name}</p>
                                 ))}
                             </div>
                             <p className='title-atribute'>Habilidades</p>

@@ -32,7 +32,7 @@ function PokemonDetails() {
             <div className={`container-details color-${color}`}>
                 <div className='main-pokemon-detail'>
                     <div className='title-pokemon'>
-                        <Link to="/">
+                        <Link to="/pokexplore">
                             <button className={`arrow-left color-${color}`}><FaArrowLeft /></button>
                         </Link>
                         <h2>{dataPokemon.name}</h2>
